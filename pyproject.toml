@@ -1,0 +1,32 @@
+[project]
+name = "multi-label-static-analysis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Satvik", email = "satvik.noida@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "altair>=6.3.0",
+    "huggingface-hub>=2.4.0",
+    "lightgbm>=4.7.0",
+    "matplotlib>=3.11.2",
+    "matplotlib-inline>=0.2.2",
+    "numpy>=2.5.4",
+    "pandas>=3.1.1",
+    "pefile>=2024.8.26",
+    "polars>=2.1.0",
+    "pygments>=2.21.0",
+    "scikit-learn>=1.9.1",
+    "signify>=0.9.3",
+    "stack-data>=0.6.3",
+    "tqdm>=4.70.1",
+]
+
+[project.scripts]
+multi-label-static-analysis = "multi_label_static_analysis:main"
+
+[build-system]
+requires = ["uv_build>=0.12.18,<0.13.0"]
+build-backend = "uv_build"
