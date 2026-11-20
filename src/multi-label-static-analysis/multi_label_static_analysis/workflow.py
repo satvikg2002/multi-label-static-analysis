@@ -1,23 +1,13 @@
 """Execute the notebook and check its saved research outputs."""
-import hashlib
 import json
 import os
-from pathlib import Path
 import sys
 
 from .config import ProjectPaths
 
 
-def digest(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open('rb') as stream:
-        for block in iter(lambda: stream.read(2**20), b''):
-            h.update(block)
-    return h.hexdigest()
-
-
 def run_notebook(paths: ProjectPaths, *, interactive: bool = False,
-                 preprocessing_only: bool = False, timeout: int = 7200,
+                 timeout: int = 7200,
                  require_data: bool = True) -> None:
     import nbformat
     from nbclient import NotebookClient
@@ -59,8 +49,6 @@ def run_notebook(paths: ProjectPaths, *, interactive: bool = False,
                 if cell.cell_type != 'code':
                     continue
                 stage = cell.metadata.get('stage', f'cell_{index}')
-                if preprocessing_only and stage.startswith('5_'):
-                    break
                 step = cell.metadata.get('step', 1)
                 if step == 1:
                     print(f'RUNNING {stage}', flush=True)
@@ -79,7 +67,7 @@ def run_notebook(paths: ProjectPaths, *, interactive: bool = False,
                 os.environ.pop(key, None)
             else:
                 os.environ[key] = value
-    print('PREPROCESSING VERIFIED' if preprocessing_only else 'NOTEBOOK COMPLETE', flush=True)
+    print('NOTEBOOK COMPLETE', flush=True)
 
 
 def baseline_scores(paths: ProjectPaths):

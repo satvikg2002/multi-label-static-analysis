@@ -1,56 +1,19 @@
+"""Vendored EMBER2024 feature extractors used by the research notebooks.
+
+Training and acquisition are orchestrated by the project modules, rather than
+upstream wrappers with incompatible feature indices and split assumptions.
+Keep features.py unchanged: its digest identifies the validated vector cache.
+"""
 from .features import (
     ByteEntropyHistogram,
     ByteHistogram,
-    DataDirectories,
-    ExportsInfo,
     GeneralFileInfo,
-    HeaderFileInfo,
-    ImportsInfo,
-    PEFeatureExtractor,
-    PEFormatWarnings,
-    RichHeader,
-    AuthenticodeSignature,
-    SectionInfo,
     StringExtractor,
-)
-from .model import (
-    read_metadata,
-    create_vectorized_features,
-    optimize_model,
-    predict_sample,
-    raw_feature_iterator,
-    read_vectorized_features,
-    train_model,
-    train_ovr_model,
-    vectorize_subset,
-)
-from .download import (
-    download_dataset,
-    download_models,
 )
 
 __all__ = [
     "ByteEntropyHistogram",
     "ByteHistogram",
-    "DataDirectories",
-    "ExportsInfo",
     "GeneralFileInfo",
-    "HeaderFileInfo",
-    "ImportsInfo",
-    "PEFeatureExtractor",
-    "PEFormatWarnings",
-    "RichHeader",
-    "AuthenticodeSignature",
-    "SectionInfo",
     "StringExtractor",
-    "read_metadata",
-    "create_vectorized_features",
-    "optimize_model",
-    "predict_sample",
-    "raw_feature_iterator",
-    "read_vectorized_features",
-    "train_model",
-    "vectorize_subset",
-    "download_dataset",
-    "download_models",
 ]

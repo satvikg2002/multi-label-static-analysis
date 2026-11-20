@@ -69,3 +69,11 @@ Empty behavior lists are treated as zeros to match upstream encoding. Because an
 Filter rankings and candidate top-64/128/256 subsets remain exploratory proposals. No best research pipeline or feature subset has been established. The new baseline leaves those candidates unused so later experiments can compare them against the full shared representation. A single multi-head neural network and the proposal's seven-role classifiers remain later incremental experiments.
 
 Notebook readability checks compare the rerun with the original analysis: all 22 numerical CSV/JSON files and all nine rendered plots are byte-identical. Acquisition extraction/reuse is tested with offline fixtures; actual transfers are not repeated during a readability review.
+
+## Minimal release
+
+Only active command, notebook-generation, analysis/training, acquisition, feature-extraction and test modules remain. Archived experiment builders, the old serialization helper, and unused upstream model/download wrappers have been removed. The vendored feature extractor stays unchanged so existing vector-cache fingerprints remain valid.
+
+The dependency list contains the libraries used by those components. Notebook execution and generation dependencies are installed with the project, so its commands also work without a development dependency group. Tests use Python's built-in `unittest`.
+
+`uv build` creates a small code wheel and a source archive containing the code, tests, three notebooks, pinned configurations, lockfile and historical reference scores. Raw data, vector caches, generated analysis/baseline results, bytecode and desktop metadata are excluded from release archives. These exclusions preserve local files; acquire data and run the notebooks to regenerate outputs from a fresh source release. Running the full test suite requires the project's local data and generated reference outputs.

@@ -8,22 +8,20 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
-    "altair>=6.3.0",
+    "black>=26.10.1",
     "huggingface-hub>=2.4.0",
-    "joblib>=1.6.0",
+    "ipykernel>=7.4.0",
     "lightgbm>=4.7.0",
     "matplotlib>=3.11.2",
-    "matplotlib-inline>=0.2.2",
+    "nbclient>=0.11.0",
+    "nbformat>=5.11.1",
     "numpy>=2.5.4",
     "pandas>=3.1.1",
     "pefile>=2024.8.26",
-    "polars>=2.1.0",
-    "pygments>=2.21.0",
     "scikit-learn>=1.9.1",
     "scipy>=1.18.1",
     "signify>=0.9.3",
-    "stack-data>=0.6.3",
-    "tqdm>=4.70.1",
+    "threadpoolctl>=3.6.0",
 ]
 
 [project.scripts]
@@ -35,17 +33,23 @@ build-backend = "uv_build"
 
 [tool.uv.build-backend]
 module-root = "src/multi-label-static-analysis"
-source-exclude = ["data"]
-wheel-exclude = ["data"]
-
-[dependency-groups]
-dev = [
-    "black>=26.10.1",
-    "ipykernel>=7.4.0",
-    "nbclient>=0.11.0",
-    "nbformat>=5.11.1",
-    "pypdf>=7.1.0",
+source-include = [
+    "uv.lock",
+    ".python-version",
+    "src/multi-label-static-analysis/configs/**",
+    "src/multi-label-static-analysis/notebooks/**",
+    "src/multi-label-static-analysis/tests/**",
+    "src/multi-label-static-analysis/results/historical/**",
 ]
+source-exclude = [
+    "**/data/**",
+    "**/artifacts/**",
+    "**/__pycache__/**",
+    "**/.DS_Store",
+    "src/multi-label-static-analysis/results/primary_analysis/**",
+    "src/multi-label-static-analysis/results/repository_baseline/**",
+]
+wheel-exclude = ["**/data/**", "**/__pycache__/**", "**/.DS_Store"]
 
 [tool.multi-label-static-analysis]
 notebook = "src/multi-label-static-analysis/notebooks/ember2024_primary_analysis.ipynb"
