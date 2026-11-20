@@ -1,0 +1,5 @@
+group,dimensions,constants,mean_zero_rate
+byteentropy,256,0,0.268680966796875
+general,7,0,0.1431175
+histogram,256,0,0.00307552734375
+strings,177,1,0.3035663276836158

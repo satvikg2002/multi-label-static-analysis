@@ -1,0 +1,12 @@
+{
+  "raw_rows": 1286315,
+  "files": 128,
+  "source_records_sha256": "dbe242c0a67b976abb8b35e35a4a0fdec648e11a3c3451aaa00e313896f52b16",
+  "parse_errors": 0,
+  "schema_issues": {},
+  "missing_dates": 0,
+  "missing_identity": 0,
+  "invalid_binary_labels": 0,
+  "missing_family": 774985,
+  "empty_behavior_lists": 1038679
+}

@@ -1,0 +1,11 @@
+split,file_type,n
+calibration,Win64,59929
+challenge,APK,256
+challenge,Dot_Net,829
+challenge,ELF,386
+challenge,PDF,805
+challenge,Win32,3225
+challenge,Win64,812
+fit,Win64,400000
+test,Win64,119892
+validation,Win64,59945

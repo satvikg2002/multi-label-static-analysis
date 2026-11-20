@@ -1,0 +1,54 @@
+{
+  "milestone": "primary data and feature analysis only",
+  "classifiers_trained": 0,
+  "serialized_models": 0,
+  "raw_rows": 1286315,
+  "retained_metadata_rows": 646082,
+  "eligible_rows": 646079,
+  "fitting_rows": 400000,
+  "fitting_formats": [
+    "Win64"
+  ],
+  "features": 696,
+  "variable_features": 695,
+  "constant_features": 1,
+  "supported_roles": [
+    "Ransomware",
+    "Infostealer",
+    "Stager",
+    "Remote Access Trojan",
+    "Banking Trojan",
+    "Cryptominer"
+  ],
+  "unsupported_roles": [
+    "Botnet Agent"
+  ],
+  "unannotated_fitting_malware": 101312,
+  "duplicate_audit": {
+    "repeated_identities": 639993,
+    "repeated_rows": 640007,
+    "binary_conflict_identities": 0,
+    "behavior_conflict_identities": 0,
+    "cross_official_identity_groups": 0
+  },
+  "tlsH_cross_partition_purges": 226,
+  "vector_quality": {
+    "rows": 646082,
+    "features": 696,
+    "nonfinite_cells": 0,
+    "vector_purges": 3,
+    "independent_row_checks": 22,
+    "feature_cache_key": "131c7ec34335f46371af9b6efe4f750eccec6ff307bbabb06dcf12f2b8560bf2",
+    "extractor_sha256": "13318c3861dce8a4c361e09669e153376eed6f9028bb56f820857a63ca637305"
+  },
+  "correlation_pairs_098": 76,
+  "correlation_pruned_dimensions": 678,
+  "correlation_and_PCA_fit_sample_n": 20000,
+  "PCA_components_needed": {
+    "0.9": 213,
+    "0.95": 308,
+    "0.99": 486
+  },
+  "source_records_sha256": "dbe242c0a67b976abb8b35e35a4a0fdec648e11a3c3451aaa00e313896f52b16",
+  "historical_score_status": "Historical comparison recovered verbatim from the previously recorded CSV report in this chat after the historical folder disappeared. No scores recomputed. Older supporting reports are not present."
+}

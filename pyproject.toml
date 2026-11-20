@@ -1,7 +1,7 @@
 [project]
 name = "multi-label-static-analysis"
 version = "0.1.0"
-description = "Add your description here"
+description = "EMBER2024 static malware detection and multi-label classification"
 readme = "README.md"
 authors = [
     { name = "Satvik", email = "satvik.noida@gmail.com" }
@@ -10,6 +10,7 @@ requires-python = ">=3.14"
 dependencies = [
     "altair>=6.3.0",
     "huggingface-hub>=2.4.0",
+    "joblib>=1.6.0",
     "lightgbm>=4.7.0",
     "matplotlib>=3.11.2",
     "matplotlib-inline>=0.2.2",
@@ -19,6 +20,7 @@ dependencies = [
     "polars>=2.1.0",
     "pygments>=2.21.0",
     "scikit-learn>=1.9.1",
+    "scipy>=1.18.1",
     "signify>=0.9.3",
     "stack-data>=0.6.3",
     "tqdm>=4.70.1",
@@ -30,3 +32,25 @@ multi-label-static-analysis = "multi_label_static_analysis:main"
 [build-system]
 requires = ["uv_build>=0.12.18,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = "src/multi-label-static-analysis"
+source-exclude = ["data"]
+wheel-exclude = ["data"]
+
+[dependency-groups]
+dev = [
+    "black>=26.10.1",
+    "ipykernel>=7.4.0",
+    "nbclient>=0.11.0",
+    "nbformat>=5.11.1",
+    "pypdf>=7.1.0",
+]
+
+[tool.multi-label-static-analysis]
+notebook = "src/multi-label-static-analysis/notebooks/ember2024_primary_analysis.ipynb"
+data-dir = "src/multi-label-static-analysis/multi_label_static_analysis/data/ember_data"
+reports-dir = "src/multi-label-static-analysis/results/primary_analysis"
+artifacts-dir = "src/multi-label-static-analysis/artifacts"
+
+historical-reports-dir = "src/multi-label-static-analysis/results/historical"

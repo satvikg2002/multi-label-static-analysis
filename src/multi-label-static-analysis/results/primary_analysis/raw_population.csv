@@ -1,0 +1,9 @@
+official,file_type,raw_rows
+challenge,APK,256
+challenge,Dot_Net,829
+challenge,ELF,386
+challenge,PDF,805
+challenge,Win32,3225
+challenge,Win64,814
+test,Win64,240000
+train,Win64,1040000

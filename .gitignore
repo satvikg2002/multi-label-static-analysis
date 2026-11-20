@@ -10,4 +10,9 @@ wheels/
 .venv
 
 # Imported data
-data/
+data
+
+# Reproducible research caches and trained binary artifacts
+artifacts/
+.ipynb_checkpoints/
+.DS_Store

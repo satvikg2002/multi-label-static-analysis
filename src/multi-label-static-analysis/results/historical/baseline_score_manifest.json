@@ -1,0 +1,7 @@
+{
+  "status": "Historical comparison recovered verbatim from the previously recorded CSV report in this chat after the historical folder disappeared. No scores recomputed. Older supporting reports are not present.",
+  "original_training_scope": "APK/PDF/Win64, 600000 fitting records, 696 inputs, six estimable categories",
+  "files": {
+    "ember2024_baseline_comparison.csv": "50b512b62a429d12f98c4721eeed7205706439c25cee3e517c9c406d1072d0d5"
+  }
+}

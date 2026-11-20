@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/FutureComputing4AI/EMBER2024",
+  "revision": "0ef753e81d98bf209f71b03cd331dfc190b5b54d",
+  "files": {
+    "lgbm_config.json": {
+      "url": "https://raw.githubusercontent.com/FutureComputing4AI/EMBER2024/0ef753e81d98bf209f71b03cd331dfc190b5b54d/examples/lgbm_config.json",
+      "sha256": "ce75c6efef47e5a2d48cc1270168b12a624e70a2b2681540d25f4c5ec6ead2cb"
+    },
+    "lgbm_config_tag.json": {
+      "url": "https://raw.githubusercontent.com/FutureComputing4AI/EMBER2024/0ef753e81d98bf209f71b03cd331dfc190b5b54d/examples/lgbm_config_tag.json",
+      "sha256": "422dabee40b7d9a85c5ea2d6d1e444444e1a872e27cf20560ec1ca93da569f05"
+    }
+  },
+  "paper": "https://arxiv.org/abs/2506.05074",
+  "pretrained_behavior_model": {
+    "url": "https://huggingface.co/joyce8/EMBER2024-benchmark-models/blob/main/EMBER2024_behavior.model",
+    "observed_feature_count": 2568,
+    "local_shared_feature_count": 696,
+    "directly_compatible": false
+  }
+}

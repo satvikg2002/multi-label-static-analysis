@@ -1,0 +1,9 @@
+{
+  "rows": 646082,
+  "features": 696,
+  "nonfinite_cells": 0,
+  "vector_purges": 3,
+  "independent_row_checks": 22,
+  "feature_cache_key": "131c7ec34335f46371af9b6efe4f750eccec6ff307bbabb06dcf12f2b8560bf2",
+  "extractor_sha256": "13318c3861dce8a4c361e09669e153376eed6f9028bb56f820857a63ca637305"
+}

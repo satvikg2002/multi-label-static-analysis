@@ -1,0 +1,8 @@
+category,fit_positive,conditional_negative,supported_for_future_study
+Ransomware,760,97928,True
+Infostealer,7520,91168,True
+Stager,3900,94788,True
+Remote Access Trojan,1341,97347,True
+Botnet Agent,0,98688,False
+Banking Trojan,100,98588,True
+Cryptominer,27989,70699,True
